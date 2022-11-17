@@ -390,7 +390,15 @@ spec:
     spec:
       serviceAccountName: basic-secret
       containers:
-
+      - name: app
+        image: jweissig/app:0.0.1
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: basic-secret
+  labels:
+    app: basic-secret
 ```
 
 - Deploy : 
